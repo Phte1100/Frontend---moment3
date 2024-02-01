@@ -1,0 +1,26 @@
+@use 'mixins';
+
+header {
+	height: 80px;
+	background-color: #BBC7A4;
+	margin: auto;
+	width: 100%;
+	padding: 0%;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+}
+.header-content {
+    @include mixins.flex-center;
+	max-width: 1200px;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	width: 100%;
+	padding: 0%;
+}
+@media only screen and (min-width: 992px) {
+	header {
+		padding: 0;
+	}	
+}

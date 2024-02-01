@@ -1,0 +1,15 @@
+$base-color: #808080;
+
+$light-theme: 'light';
+$dark-theme: 'dark';
+
+// Ljust tema
+$light-theme-background: lighten($base-color, 20%);
+$light-theme-text: darken($base-color, 99%); // Exempel på att göra texten något mörkare än basfärgen
+$light-theme-accent: lighten($base-color, 30%); // Ljusare accentfärg
+
+
+// Mörkt tema
+$dark-theme-background: darken($base-color, 80%);
+$dark-theme-text: lighten($base-color, 1%); // Exempel på att göra texten något ljusare än basfärgen för kontrast
+$dark-theme-accent: darken($base-color, 30%); // Mörkare accentfärg

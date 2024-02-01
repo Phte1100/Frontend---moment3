@@ -1,0 +1,15 @@
+@mixin flex-center($justifyContent: space-between) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: center;
+  }
+
+  $light-theme: true;
+
+  @mixin lightOrDark {
+    @if $light-theme {
+      border: 2px solid black;
+    } @else {
+      border: 2px solid white;
+    }
+  }

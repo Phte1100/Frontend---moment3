@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+@media (prefers-color-scheme: dark) {
+	body {
+	  background: $dark-theme-background;
+	  color: $dark-theme-text;
+	}
+  }
+  @media (prefers-color-scheme: light) {
+	body {
+	  background: $light-theme-background;
+	  color: $light-theme-text;
+	}
+  }
+
+$light-theme: true;
+
+%lightOrDark {
+    @if $light-theme {
+    img {
+        border: 2px;
+        border-color: black;
+    }
+    } @else {
+    img {
+        border: 2px;
+        border-color: white;
+    }
+    }
+}

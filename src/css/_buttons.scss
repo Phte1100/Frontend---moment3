@@ -1,0 +1,37 @@
+@use 'mixins';
+
+.menu-btn {
+    @include mixins.flex-center(flex-start);
+	padding: 8px 15px;
+	background-color: #BBC7A4;
+	border: black solid 2px;
+	cursor: pointer;
+	font-size: 26px;
+	font-weight: 400;
+}
+.open {
+	margin: 0 1em;
+}
+.menu-btn:hover {
+	background-color: #AAB395;
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+}
+.margin-icon {
+	margin-right: 10px;
+}
+.bars {
+	display: block;
+	width: 20px;
+	height: 3px;
+	background-color: black;
+	margin: 5px 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-btn {
+		display: none;
+	}
+	#open-menu {
+		display: none !important;
+	}
+}

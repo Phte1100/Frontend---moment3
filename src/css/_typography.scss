@@ -1,0 +1,21 @@
+%base-typography {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #e75ab8;
+  }
+  h1, h2 {
+    @extend %base-typography;
+  }
+h1 {
+	font-size: 42px;
+}
+h2 {
+	font-size: 36px;
+	margin-top: 5%;
+	margin-bottom: 3%;
+}
+.menu-text {
+	font-size: 1.2em;
+	color: black;
+}

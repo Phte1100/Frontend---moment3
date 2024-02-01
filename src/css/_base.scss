@@ -1,0 +1,17 @@
+@use 'mixins';
+
+body {
+	padding: 0;
+	margin: 0%;
+}
+section {
+	max-width: 600px;
+	width: 100%;
+	margin: auto;
+	margin-top: 10%;
+}
+img {
+    @include mixins.lightOrDark;
+	max-width: 600px;
+	display: block;
+}
