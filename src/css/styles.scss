@@ -1,25 +1,12 @@
-// Abstracts
-@use 'mixins';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
 
+@use 'base/base';
+@use 'base/typography';
 
-// Base
-@use 'base';
-@use 'typography' as *;
+@use 'components/buttons';
 
-// Components
-@use 'buttons' as *;
-@use 'navigation' as *;
+@use 'layout/navigation';
+@use 'layout/header';
 
-// Layout
-@use 'header' as *;
-// Importera fler layout-filer vid behov
-
-// Pages
-// Importera fler sid-specifika stilar vid behov
-@use 'variables' as *;
-// Themes
-@use 'theme' as *;
-
-// Vendors
-// Importera externa bibliotek och ramverk vid behov
-
+@use 'themes/theme';

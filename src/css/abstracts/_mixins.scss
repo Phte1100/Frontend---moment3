@@ -1,13 +1,15 @@
+@use '../themes/theme';
+
 @mixin flex-center($justifyContent: space-between) {
     display: flex;
     justify-content: $justifyContent;
     align-items: center;
   }
 
-  $light-theme: true;
+  $prefers-color-scheme: light;
 
   @mixin lightOrDark {
-    @if $light-theme {
+    @if (prefers-color-scheme: light) {
       border: 2px solid black;
     } @else {
       border: 2px solid white;
