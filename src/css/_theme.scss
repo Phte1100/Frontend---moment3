@@ -12,19 +12,3 @@
 	  color: $light-theme-text;
 	}
   }
-
-$light-theme: true;
-
-%lightOrDark {
-    @if $light-theme {
-    img {
-        border: 2px;
-        border-color: black;
-    }
-    } @else {
-    img {
-        border: 2px;
-        border-color: white;
-    }
-    }
-}
