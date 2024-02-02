@@ -5,13 +5,3 @@
     justify-content: $justifyContent;
     align-items: center;
   }
-
-  $prefers-color-scheme: light;
-
-  @mixin lightOrDark {
-    @if ($prefers-color-scheme: light) {
-      border: 2px solid black;
-    } @else {
-      border: 2px solid white;
-    }
-  }

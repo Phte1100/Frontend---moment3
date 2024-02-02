@@ -1,4 +1,5 @@
 @use '../abstracts/mixins';
+@use '../abstracts/variables' as *;
 
 body {
 	padding: 0;
@@ -6,12 +7,15 @@ body {
 }
 section {
 	max-width: 600px;
-	width: 100%;
+	width: auto;
 	margin: auto;
+	padding-left: 15%;
+	padding-right: 15%;
 	margin-top: 10%;
 }
 img {
-    @include mixins.lightOrDark;
-	max-width: 600px;
+    border: 10px solid $image-border-color;
+    max-width: 100%;
+	height: auto;
 	display: block;
 }

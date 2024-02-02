@@ -13,3 +13,13 @@ $light-theme-accent: lighten($base-color, 30%); // Ljusare accentfärg
 $dark-theme-background: darken($base-color, 80%);
 $dark-theme-text: lighten($base-color, 1%); // Exempel på att göra texten något ljusare än basfärgen för kontrast
 $dark-theme-accent: darken($base-color, 30%); // Mörkare accentfärg
+
+
+// min If/else
+$image-border-color: red;
+
+@if ($image-border-color == blue) {
+  $image-border-color: darken($image-border-color, 20%);
+} @else {
+  $image-border-color: lighten(lightblue, 10%);
+}

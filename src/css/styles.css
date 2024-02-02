@@ -17,14 +17,17 @@ body {
 
 section {
   max-width: 600px;
-  width: 100%;
+  width: auto;
   margin: auto;
+  padding-left: 15%;
+  padding-right: 15%;
   margin-top: 10%;
 }
 
 img {
-  border: 2px solid black;
-  max-width: 600px;
+  border: 10px solid #d4ebf2;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -47,6 +50,11 @@ h2 {
 
 .menu-text {
   font-size: 1.2em;
+  color: black;
+}
+
+.logo {
+  text-decoration: none;
   color: black;
 }
 
