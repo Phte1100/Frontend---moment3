@@ -21,7 +21,8 @@ section {
   margin: auto;
   padding-left: 15%;
   padding-right: 15%;
-  margin-top: 10%;
+  top: 200px;
+  position: relative;
 }
 
 img {
