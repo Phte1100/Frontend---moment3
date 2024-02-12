@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moment 3</title>
+    <title>Moment 4</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <script src="js/main.js" type="module"></script>
 </head>
 <body>
@@ -45,16 +46,20 @@
 			</nav>
 		</div>
 	</header>
-    <section>
-        <h2>Sass</h2>
-        <p>Att jobba med SASS, en sorts utvecklad och mer komplicerad CSS, kändes först svårt. När jag började med SASS var det svårt att lära mig alla nya saker som variabler och hur man grupperar kod. Det kändes nästan för mycket arbete för små sidor, där det inte verkade så nödvändigt.
-            <br><br>
-            Men för stora webbsidor kan jag tänka mig att SASS är ett extremt bra verktyg. Det hjälper till att hålla koden enkel att förstå och ändra, speciellt när det finns mycket stilinformation. Med SASS blir det lättare att ändra färger eller typsnitt överallt på en gång. Och det är smidigt att dela upp koden i små bitar och sedan sätta ihop dem igen.
-            <br><br>
-            Så även om det kan vara lite jobbigt att lära sig SASS i början, är det väldigt användbart för stora projekt där det kan spara mycket tid och göra koden lättare att hantera.
-            <br><br>
-            Dock så var arbetet med IF-else satser otroligt komplicerat att få till.
-            </p>
+    <section id="ani">
+        <h2>Animationer</h2>
+            <h3>Laddningsprickar</h3>
+            <div class="loader">
+                <span class="loader__element"></span>
+                <span class="loader__element"></span>
+                <span class="loader__element"></span>
+              </div>
+            <h3>Knapp</h3>
+            <button type="button" id="button">Hovra mig!</button>
+            <h3>Text som ändras</h3>
+            <div id="text">text</div>
+            <h3>Cirkel som flyttas</h3>
+            <div class="moving-circle"></div>
     </section>
 </body>
 </html>

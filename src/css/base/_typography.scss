@@ -1,10 +1,11 @@
+
 %base-typography {
     font-family: Roboto, sans-serif;
     font-weight: 700;
     text-align: center;
     color: #e75ab8;
   }
-  h1, h2 {
+  h1, h2, h3 {
     @extend %base-typography;
   }
 h1 {
@@ -14,6 +15,9 @@ h2 {
 	font-size: 36px;
 	margin-top: 5%;
 	margin-bottom: 3%;
+}
+h3 {
+  font-size: 24px;
 }
 .menu-text {
 	font-size: 1.2em;
