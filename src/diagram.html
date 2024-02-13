@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moment 3</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <script src="js/main.js" type="module"></script>
+    <script src="js/chart.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body style="background-color: white;">
     <header>
 		<!-- logotyp -->
 		<div class="header-content">
@@ -47,20 +48,10 @@
 		</div>
 	</header>
     <section>
-        <h2>Bilder från London</h2>
-        <p>Bilder från min resa till London med goda vänner.</p>
-        <picture>
-            <source srcset="../src/img/1.jpg?as=avif&width=900" type="image/avif" />
-            <source srcset="../src/img/1.jpg?as=webp&width=900" type="image/webp" />
-            <source srcset="../src/img/1.jpg?width=900" type="image/jpeg" />
-            <img src="../src/img/1.jpg?width=200" alt="Bild på fotbollsplan och fulla läktare" />
-          </picture>
-          <picture>
-            <source srcset="../src/img/2.jpg?as=avif&width=900" type="image/avif" />
-            <source srcset="../src/img/2.jpg?as=webp&width=900" type="image/webp" />
-            <source srcset="../src/img/2.jpg?width=900" type="image/jpeg" />
-            <img src="../src/img/2.jpg?width=200" style="margin-top: 10px; margin-bottom: 10px;" alt="bild på Arsenal-butik utanför Emirates Stadium" />
-          </picture>
+        <h2>Diagram</h2>
+        <div>
+            <canvas id="myChart"></canvas>
+          </div>
     </section>
 </body>
 </html>
