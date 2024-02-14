@@ -1,27 +1,22 @@
 "use strict";
 
 const url = "https://studenter.miun.se/~mallar/dt211g/";
-let course;
-let program;
 window.onload = init;
 
 async function init() {
     try {
-
-    // fetchanrop
-    const response = await fetch(url);
-    course = await response.json();
-    program = await response.json();
-
-    displayCourse(course)
-    displayProgram(program)
-
-} catch {
-    // catch om något går fel
-    document.getElementById("error").innerHTML = "<p>Något gick fel!</p>";
+        // fetchanrop
+        const response = await fetch(url);
+        const data = await response.json(); // Deklarera data korrekt
+        displayCourse(data);
+        displayProgram(data);
+    } catch (error) {
+        // Logga fel och visa felmeddelande
+        console.error(error);
+        document.getElementById("error").innerHTML = "<p>Något gick fel!</p>";
+    }
 }
-
-
+Chart.defaults.font.size = 14;
 function displayCourse(data) {
     const courses = data.filter(item => item.type === "Kurs");
     const sortedCourses = courses.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
@@ -33,12 +28,11 @@ function displayCourse(data) {
 
 function displayProgram(data) {
     const programs = data.filter(item => item.type === "Program");
-    const sortedProgram = Programs.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
+    const sortedPrograms = programs.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
     const topPrograms = sortedPrograms.slice(0, 5);
     const programNames = topPrograms.map(program => program.name);
     const applicantsTotal = topPrograms.map(program => program.applicantsTotal);
     createPieChart(programNames, applicantsTotal);
-}
 }
 
 function createChart(labels, data) {
@@ -61,7 +55,23 @@ function createChart(labels, data) {
             }
         }
     });
+}
 
-
-    
+function createPieChart(labels, data) {
+    const ctx = document.getElementById('myPieChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Totalt antal sökande',
+                data: data,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
 }
