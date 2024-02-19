@@ -40,6 +40,23 @@ img {
   display: block;
 }
 
+iframe {
+  width: 800px;
+  max-width: 100%;
+  aspect-ratio: 3/2;
+}
+
+#map {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#chart {
+  max-width: 100%;
+  width: 100%;
+}
+
 h1, h2, h3 {
   font-family: Roboto, sans-serif;
   font-weight: 700;

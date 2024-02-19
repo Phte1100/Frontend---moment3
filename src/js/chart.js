@@ -35,6 +35,7 @@ function displayProgram(data) {
     createPieChart(programNames, applicantsTotal);
 }
 
+// Funktion för att skapa ett stapeldiagram med Chart.js
 function createChart(labels, data) {
     const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
@@ -57,6 +58,7 @@ function createChart(labels, data) {
     });
 }
 
+// Funktion för att skapa ett cirkeldiagram (doughnut) med Chart.js
 function createPieChart(labels, data) {
     const ctx = document.getElementById('myPieChart').getContext('2d');
     new Chart(ctx, {
